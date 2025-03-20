@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Blacktea's Personal Blog</title>
+        <style>
+            /* 定義.mydata類的樣式 */
+            .mydata {
+                background-color: pink;
+                margin-right: 24px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            /* 定義.target類的樣式 */
+            .target {
+                text-align: left;
+                margin-bottom: 0;
+                font-size: xx-large;
+                margin-top: 0;
+            }
+
+            /* 設置body的背景顏色 */
+            body {
+                background-color: #f0f0f0;
+                color: #333333
+            }
+
+            /* 定義.large-link類的樣式 */
+            .large-link {
+                font-size: x-large;
+                color: brown;
+            }
+
+            /* 定義.company-list類的樣式 */
+            .company-list {
+                font-size: x-large;
+                text-align: left;
+                margin-left: 290px;
+                margin-top: 0;
+            }
+
+            /* 定義.company-list img的樣式 */
+            .company-list img {
+                height: 20px;
+                margin-left: 2px;
+            }
+
+            /* 定義.company-table類的樣式 */
+            .company-table {
+                width: 600px;
+                border-collapse: collapse;
+            }
+
+            /* 定義.company-table td和.company-table th的樣式 */
+            .company-table td, .company-table th {
+                border: 1px solid black;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 頁面標題 -->
+        <h1>My Personal blog</h1>
+        <hr/>
+        <!-- 字典連結，使用.large-link類來設置樣式 -->
+        <a class="large-link" href="https://dictionary.cambridge.org/translate/#google_vignette">Cambridge Dictionary</a>
+        <!-- 字典圖片，增加alt屬性提升可訪問性 -->
+        <img src="dictionary image.png" alt="Dictionary Image" style="height: 50px; margin-left: 10px;">
+        <!-- 個人標誌圖片 -->
+        <img style="float: left;" width="300" alt="Personal symbol" src="https://images.drlogy.com/assets/uploads/img/admin/knowledgefeed/a0f0800ea7f613885087bc9c6b024cfa.jpg"/>
+        <hr/>
+        <!-- 目標公司標題 -->
+        <h2 class="target">
+            Target Company
+            <!-- 星星圖片，增加alt屬性提升可訪問性 -->
+            <img src="star image.png" alt="Star Image" style="height: 30px;">
+        </h2>
+        <!-- 目標公司列表，使用.company-list類來設置樣式 -->
+        <ul class="company-list">
+            <li>
+                Google
+                <!-- Google圖片，增加alt屬性提升可訪問性 -->
+                <img src="google images.png" alt="Google Image">
+            </li>
+            <li>
+                Facebook
+                <!-- Facebook圖片，增加alt屬性提升可訪問性 -->
+                <img src="faceboook image.avif" alt="Facebook Image">
+            </li>
+            <li>
+                Amazon
+                <!-- Amazon圖片，增加alt屬性提升可訪問性 -->
+                <img src="Amazon image.jpg" alt="Amazon Image">
+            </li>
+        </ul>
+        <!-- 公司信息表格，使用.company-table類來設置樣式 -->
+        <table class="company-table">
+            <tr>
+                <!-- 表格標題，使用<th>提升語義化 -->
+                <th>Company</th>
+                <th>Working Environment</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>Google</td>
+                <td>Comfortable</td>
+                <td>6k/mon</td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>Under pressure</td>
+                <td>7k/mon</td>
+            </tr>
+            <tr>
+                <td>Amazon</td>
+                <td>Common</td>
+                <td>6k/mon</td>
+            </tr>
+        </table>
+        <hr>
+        <!-- 切換內容的按鈕 -->
+        <div>
+            <span class="mydata" onclick="changeToaboutme();">About Me</span>
+            <span class="mydata" onclick="changetoStudying();">Studying</span>
+        </div>
+        <hr>
+        <!-- 關於我的內容，初始隱藏 -->
+        <div id="about" style="display: none;">I am studying in NTUST</div>
+        <!-- 學習經歷 -->
+        <div id="sty">I graduated from SIVS</div>
+
+        <script>
+            // 切換到關於我的內容
+            function changeToaboutme() {
+                let aboutelm = document.querySelector("#about");
+                let styelm = document.querySelector("#sty");
+                aboutelm.style.display = "block";
+                styelm.style.display = "none";
+            }
+
+            // 切換到學習經歷
+            function changetoStudying() {
+                let aboutelm = document.querySelector("#about");
+                let styelm = document.querySelector("#sty");
+                aboutelm.style.display = "none";
+                styelm.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
